@@ -16,7 +16,11 @@
 <a href="https://space.bilibili.com/1930216477"><img src="https://img.shields.io/badge/哔哩哔哩-BeiChenStanly-pink?logo=bilibili" /></a>
 <img src="https://img.shields.io/badge/QQ-3994689057-green?logo=tencentqq" />
 </p>
+My repos:
 
+<a href="https://beichenstanly.github.io/Educate">Educate</a>
+
+<a href="https://beichenstanly.github.io/MineSweeping">Mine Sweeping</a>
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&&section=footer&text=The%20End&fontSize=90&fontAlign=50&fontAlignY=70&desc=See%20You!&descAlign=50&descSize=30&descAlignY=40&animation=twinkling" />
 </p>
