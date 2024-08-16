@@ -1,269 +1,203 @@
-/* noto-sans-sc-regular */
-@font-face {
-  font-family: 'Noto Sans SC';
-  font-style: normal;
-  font-weight: regular;
-  src: url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.eot');
-  src: local('Noto Sans SC'), local('NotoSans SC-Normal'), url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.eot?#iefix') format('embedded-opentype'), url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.woff2') format('woff2'), url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.woff') format('woff'), url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.ttf') format('truetype'), url('//lib.baomitu.com/fonts/noto-sans-sc/noto-sans-sc-regular.svg#NotoSans SC') format('svg');
-}
-
-/* material-design-icons */
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url('//lib.baomitu.com/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.eot');
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url('//lib.baomitu.com/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff2') format('woff2'), url('//lib.baomitu.com/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.woff') format('woff'), url('//lib.baomitu.com/material-design-icons/3.0.1/iconfont/MaterialIcons-Regular.ttf') format('truetype');
-}
-
-:root {
-  --select-bg: rgba(147, 107, 255, 0.286);
-  --hover-bg: rgba(60, 251, 76, 0.286);
-  --active-bg: rgba(25, 240, 43, 0.427);
-  --link-color: #f00;
-  --link-bg: #37723a;
-  --button-bg: #4ca951;
-  --button-hover-bg: #57d15d;
-  --button-active-bg: #37723a;
-}
-
-/* [theme="dark"] {
-  --select-color: rgba(255, 107, 147, 0.286);
-} */
-::selection {
-  background-color: var(--select-bg);
-}
-
-::-moz-selection {
-  background-color: var(--select-bg);
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-@supports (scrollbar-width: none) {
-  * {
-    /* Firefox */
-    scrollbar-width: none;
-  }
-}
-
-:root,
-input,
-select,
-button {
-  font-family: Noto Sans SC;
-  line-height: 1.2;
-}
-
 body {
-  margin: 0;
-  text-align: center;
-  background-color: #f1eff6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffe4e1, #ffd3e0);
+    color: #333;
 }
 
-a {
-  text-decoration: none;
-  color: var(--link-color);
-  border-radius: 2px;
-  cursor: pointer;
+header.navbar {
+    display: flex;
+    justify-content: center;
+    background: #f7c6c7;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-a:hover,
-input[type='checkbox'] + label:hover,
-input[type='radio'] + label:hover {
-  background-color: var(--hover-bg);
+header.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-a:active {
-  background-color: var(--active-bg);
+header.navbar a:hover {
+    background-color: #f76c6c;
+    color: #fff;
 }
 
-button,
-input[type='button'],
-input[type='file'] + label {
-  background-color: var(--button-bg);
-  color: #fff;
-  border: none;
-  border-radius: 2px;
-  font-size: 0.9em;
-  padding: 0.1em 0.6em;
-  margin: 0.1em;
-  cursor: pointer;
-  line-height: normal;
+.container {
+    max-width: 900px;
+    margin: 80px auto 20px auto;
+    /* Adjust margin to account for fixed header */
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-button:hover,
-input[type='button']:hover,
-input[type='file'] + label:hover {
-  background-color: var(--button-hover-bg);
+h2 {
+    font-size: 1.8em;
+    color: #f76c6c;
+    border-bottom: 2px solid #f76c6c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-button:active,
-input[type='button']:active,
-input[type='file'] + label:active {
-  background-color: var(--button-active-bg);
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-button,
-label,
-input[type='button'] {
-  /* Prevent text selection */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  /* Fix style inconsistency for Safari 14.5- */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.projects-table th,
+.projects-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
-input[type='checkbox'],
-input[type='file'],
-input[type='radio'],
-.hide {
-  display: none !important;
+.projects-table th {
+    background-color: #f76c6c;
+    color: #fff;
 }
 
-.i-pause::after {
-  font: 1em 'Material Icons';
-  content: '\e034';
+.projects-table a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-.i-settings::after {
-  font: 1em 'Material Icons';
-  content: '\e8b8';
+.projects-table a:hover {
+    background-color: #555;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
-input[type='checkbox'] + label::before {
-  font: 0.9em 'Material Icons';
-  content: '\e835';
-  margin: 0 0.2em;
-  display: inline-block;
-  transform: translateY(0.1em);
+.projects-table a:hover::after {
+    content: attr(data-description);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
-input[type='checkbox']:checked + label::before {
-  content: '\e834';
+.social-links {
+    text-align: center;
+    padding: 20px;
+    background: #f7c6c7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-input[type='radio'] + label::before {
-  font: 0.9em 'Material Icons';
-  content: '\e836';
-  margin: 0 0.2em;
-  display: inline-block;
-  transform: translateY(0.1em);
+.social-links a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    display: inline-block;
+    transition: color 0.3s;
 }
 
-input[type='radio']:checked + label::before {
-  content: '\e837';
+.social-links a:hover {
+    color: #f76c6c;
 }
 
-textarea,
-input[type='text'] {
-  border: 1px solid #888;
-  border-radius: 2px;
-  padding: 0.2em;
-  margin: 1px;
-  line-height: 1.2;
+.social-links img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
 }
 
-.main {
-  display: none;
+.avatar {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.title {
-  color: #00f;
-  word-break: break-all;
+.avatar img {
+    width: 100%;
+    height: auto;
 }
 
-small {
-  font-size: 70%;
+.name {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.info,
-strong.error {
-  color: #f00;
+.blog-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-strong.warning {
-  color: #fa0;
+.blog-post {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
 }
 
-strong.accept {
-  color: #080;
+.blog-post:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.index {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+.blog-post a {
+    text-decoration: none;
+    color: #f76c6c;
 }
 
-.index > .header {
-  color: blue;
-  font-size: 2em;
-  font-weight: bold;
-  margin: 0;
-  padding: 2rem;
-  overflow-wrap: break-word;
+.blog-post-header {
+    background: #f7c6c7;
+    padding: 15px;
+    color: #fff;
 }
 
-.index > .footer {
-  margin: 0;
-  padding: 2rem;
-  overflow-wrap: break-word;
+.blog-post-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #f76c6c;
 }
 
-.index > .content {
-  flex-grow: 1;
-  width: 90%;
-  max-width: 480px;
-  margin: 0 auto;
+.blog-post-header p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
 }
 
-.index > .content fieldset {
-  margin: auto;
-  border: none;
-  border-top: 1px dashed gray;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.blog-post-body {
+    padding: 15px;
 }
 
-.index > .content legend {
-  padding: 0 1em;
-  margin: 0 auto;
-}
-
-.index > .content a {
-  display: inline-block;
-  margin: 5px;
-  border: 2px solid var(--link-bg);
-  border-radius: 5px;
-  padding: 10px;
-  flex-grow: 1;
-  word-break: break-all;
-}
-
-.info {
-  font-size: 1em;
-  line-height: 1.33em;
-}
-
-.profile {
-  font-size: 0.8em;
-  line-height: 1.5em;
-}
-
-.disabled {
-  opacity: 0.2;
-  pointer-events: none;
-}
-
-.fade {
-  opacity: 0 !important;
-  visibility: hidden;
+.blog-post-body p {
+    margin: 10px 0;
+    color: #555
 }

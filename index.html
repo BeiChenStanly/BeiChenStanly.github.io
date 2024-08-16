@@ -1,35 +1,105 @@
 <!DOCTYPE html>
-<html lang="ch">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeiChen's Page</title>
+    <link rel="icon" href="assets/touxiang.jpg">
+    <title>个人主页</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpeg" href="touxiang.jpg">
-    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="index">
-    <p class="header">BeiChen's Projects</p>
-    <div class="content">
-    <fieldset>
-        <legend>Pages</legend>
-        <a href="https://beichenstanly.github.io/Educate">Educate</a>
-        <a href="https://beichenstanly.github.io/MineSweeping">Mine Sweeping</a>
-    </fieldset>
-    <fieldset>
-        <legend>Repositories</legend>
-        <a href="https://github.com/BeiChenStanly/Educate">Educate</a>
-        <a href="https://github.com/BeiChenStanly/MineSweeping">Mine Sweeping</a>
-        <a href="https://github.com/BeiChenStanly/BeiChenStanly.github.io">This Website</a>
-        <a href="https://github.com/BeiChenStanly/BeiChenStanly">My Github Profile</a>
-        <a href="https://github.com/BeiChenStanly/Cpplearn">Learn Cpp</a>
-        <a href="https://github.com/BeiChenStanly/Cslearn">Learn Csharp</a>
-    </fieldset>
+    <header class="navbar">
+        <a href="index.html">主页</a>
+        <a href="blog.html">博客</a>
+    </header>
+    <div class="container" id="home">
+        <div class="avatar">
+            <img src="assets/touxiang.jpg" alt="头像">
+        </div>
+        <div class="name">Bei Chen Stanly</div>
+        <section class="intro">
+            <h2>个人简介</h2>
+            <p>你好！我是一名前端开发者，专注于创造现代化和响应式的网页应用。请查看我的项目和社交媒体链接，以了解更多关于我的信息。</p>
+        </section>
     </div>
-    <p class="footer">© BeiChenStanly</p>
+    <div class="container" id="projects">
+        <section class="projects">
+            <h2>项目展示</h2>
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>项目名称</th>
+                        <th>仓库链接</th>
+                        <th>页面链接</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Educate</td>
+                        <td><a href="https://github.com/BeiChenStanly/Educate" target="_blank"
+                                data-description="Educate: 教育项目">GitHub 仓库</a></td>
+                        <td><a href="https://beichenstanly.github.io/Educate" target="_blank"
+                                data-description="Educate: 教育项目页面">项目页面</a></td>
+                    </tr>
+                    <tr>
+                        <td>MineSweeping</td>
+                        <td><a href="https://github.com/BeiChenStanly/MineSweeping" target="_blank"
+                                data-description="MineSweeping: 扫雷游戏">GitHub 仓库</a></td>
+                        <td><a href="https://beichenstanly.github.io/MineSweeping" target="_blank"
+                                data-description="MineSweeping: 扫雷游戏页面">项目页面</a></td>
+                    </tr>
+                    <tr>
+                        <td>Vuelearn</td>
+                        <td><a href="https://github.com/BeiChenStanly/Vuelearn" target="_blank"
+                                data-description="Vuelearn: Vue 学习项目">GitHub 仓库</a></td>
+                        <td><a href="https://beichenstanly.github.io/Vuelearn" target="_blank"
+                                data-description="Vuelearn: Vue 学习项目页面">项目页面</a></td>
+                    </tr>
+                    <tr>
+                        <td>BeiChenStanly</td>
+                        <td><a href="https://github.com/BeiChenStanly/BeiChenStanly" target="_blank"
+                                data-description="个人主页仓库">GitHub 仓库</a></td>
+                        <td class="disabled">无页面</td>
+                    </tr>
+                    <tr>
+                        <td>CsLearn</td>
+                        <td><a href="https://github.com/BeiChenStanly/CsLearn" target="_blank"
+                                data-description="CsLearn: C# 学习项目">GitHub 仓库</a></td>
+                        <td class="disabled">无页面</td>
+                    </tr>
+                    <tr>
+                        <td>Cpplearn</td>
+                        <td><a href="https://github.com/BeiChenStanly/Cpplearn" target="_blank"
+                                data-description="Cpplearn: C++ 学习项目">GitHub 仓库</a></td>
+                        <td class="disabled">无页面</td>
+                    </tr>
+                    <tr>
+                        <td>beichen-template-1.21</td>
+                        <td><a href="https://github.com/BeiChenStanly/beichen-template-1.21" target="_blank"
+                                data-description="beichen-template-1.21: 模板项目">GitHub 仓库</a></td>
+                        <td class="disabled">无页面</td>
+                    </tr>
+                    <tr>
+                        <td>BeiChenStanly.github.io</td>
+                        <td><a href="https://github.com/BeiChenStanly/BeiChenStanly.github.io" target="_blank"
+                                data-description="个人主页仓库">GitHub 仓库</a></td>
+                        <td class="disabled">无页面</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div class="social-links">
+        <a href="https://blog.csdn.net/2401_82964911" target="_blank">
+            <img src="assets/csdn.png" alt="CSDN">
+            CSDN
+        </a>
+        <a href="https://github.com/BeiChenStanly" target="_blank">
+            <img src="assets/github.png" alt="GitHub">
+            GitHub
+        </a>
     </div>
 </body>
 
